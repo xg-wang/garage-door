@@ -1,5 +1,5 @@
 {
-  "name": "simple-node-typescript-starter",
+  "name": "garage-door",
   "version": "0.1.0",
   "main": "build/index.js",
   "scripts": {
@@ -8,39 +8,32 @@
     "dev": "nodemon src/index.ts",
     "lint": "eslint .",
     "test": "jest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "ncu": "npx npm-check-updates"
   },
-  "keywords": [
-    "typescript",
-    "node",
-    "starter",
-    "template",
-    "boilerplate",
-    "eslint",
-    "prettier"
-  ],
+  "keywords": [],
   "author": "Thomas Wang",
   "license": "MIT",
-  "description": "A simple starter for Node project written in TypeScript",
+  "description": "Play with my garage door",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:xg-wang/simple-node-typescript-starter.git"
+    "url": "git+ssh://git@github.com:xg-wang/garage-door.git"
   },
   "devDependencies": {
-    "@types/jest": "^27.4.0",
-    "@types/node": "^17.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.8.1",
-    "@typescript-eslint/parser": "^5.8.1",
-    "eslint": "^8.6.0",
-    "eslint-config-prettier": "^8.3.0",
-    "husky": "^7.0.4",
-    "jest": "^27.4.5",
-    "lint-staged": ">=12",
-    "nodemon": "^2.0.15",
-    "prettier": "^2.5.1",
-    "ts-jest": "^27.1.2",
-    "ts-node": "^10.4.0",
-    "typescript": "^4.5.4"
+    "@types/jest": "^28.1.4",
+    "@types/node": "^18.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "jest": "^28.1.2",
+    "lint-staged": ">=13",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
+    "ts-jest": "^28.0.5",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4"
   },
   "volta": {
     "node": "16.13.1"

@@ -1,0 +1,14 @@
+# name: Cron Job
+#
+# on:
+#   # Triggers the workflow every 10 minutes
+#   schedule:
+#     - cron: "*/10 * * * *"
+#
+# jobs:
+#   cron:
+#     runs-on: ubuntu-latest
+#
+#     steps:
+#       - name: Hello World
+#         run: echo Hello, world!
