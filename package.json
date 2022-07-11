@@ -1,0 +1,51 @@
+{
+  "name": "simple-node-typescript-starter",
+  "version": "0.1.0",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node build/index.js",
+    "dev": "nodemon src/index.ts",
+    "lint": "eslint .",
+    "test": "jest",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "typescript",
+    "node",
+    "starter",
+    "template",
+    "boilerplate",
+    "eslint",
+    "prettier"
+  ],
+  "author": "Thomas Wang",
+  "license": "MIT",
+  "description": "A simple starter for Node project written in TypeScript",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:xg-wang/simple-node-typescript-starter.git"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.4",
+    "jest": "^27.4.5",
+    "lint-staged": ">=12",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "ts-jest": "^27.1.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  },
+  "volta": {
+    "node": "16.13.1"
+  },
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown"
+  }
+}
