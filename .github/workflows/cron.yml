@@ -1,14 +1,26 @@
-# name: Cron Job
-#
-# on:
-#   # Triggers the workflow every 10 minutes
-#   schedule:
-#     - cron: "*/10 * * * *"
-#
-# jobs:
-#   cron:
-#     runs-on: ubuntu-latest
-#
-#     steps:
-#       - name: Hello World
-#         run: echo Hello, world!
+name: Cron Job
+
+on:
+  # Triggers the workflow every 10 minutes
+  schedule:
+    - cron: "*/10 * * * *"
+
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: volta-cli/action@v1
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Run
+        env::
+          - MYQ_PASSWORD=${{ secrets.MYQ_PASSWORD }}
+          - MYQ_SERIAL_NUMBER=${{ secrets.MYQ_SERIAL_NUMBER }}
+          - MYQ_USERNAME=${{ secrets.MYQ_USERNAME }}
+        run: npm start
