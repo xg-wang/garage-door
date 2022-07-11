@@ -35,7 +35,9 @@ async function main() {
   const state = device.state.door_state;
   console.log(`Garage door state: ${state}`);
 
-  await postMessage(state);
+  if (state !== "closed") {
+    await postMessage(state);
+  }
 }
 
 function postMessage(state: string) {
