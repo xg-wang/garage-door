@@ -19,7 +19,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Run
-        env::
+        env:
           - MYQ_PASSWORD=${{ secrets.MYQ_PASSWORD }}
           - MYQ_SERIAL_NUMBER=${{ secrets.MYQ_SERIAL_NUMBER }}
           - MYQ_USERNAME=${{ secrets.MYQ_USERNAME }}
