@@ -4,6 +4,9 @@ on:
   # Triggers the workflow every 10 minutes
   schedule:
     - cron: "*/10 * * * *"
+  push:
+    branches:
+      - main
 
 jobs:
   cron:
@@ -20,9 +23,9 @@ jobs:
         run: npm run build
       - name: Run
         env:
-          - MYQ_PASSWORD=${{ secrets.MYQ_PASSWORD }}
-          - MYQ_SERIAL_NUMBER=${{ secrets.MYQ_SERIAL_NUMBER }}
-          - MYQ_USERNAME=${{ secrets.MYQ_USERNAME }}
-          - TG_BOT_TOKEN=${{ secrets.TG_BOT_TOKEN }}
-          - TG_CHAT_ID=${{ secrets.TG_CHAT_ID }}
+          MYQ_PASSWORD: ${{ secrets.MYQ_PASSWORD }}
+          MYQ_SERIAL_NUMBER: ${{ secrets.MYQ_SERIAL_NUMBER }}
+          MYQ_USERNAME: ${{ secrets.MYQ_USERNAME }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
         run: npm start
